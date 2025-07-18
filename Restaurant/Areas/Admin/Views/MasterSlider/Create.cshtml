@@ -1,0 +1,93 @@
+﻿@model Restaurant.Areas.Admin.ViewModels.MasterSliderViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="pagetitle">
+    <h2>MasterSlider</h2>
+    <br />
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="MasterSlider">MasterSlider</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+    </nav>
+</div>
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="MasterSliderId" class="form-control" type="hidden" value="0" />
+    <div class="row m-0">
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterSliderTitle" class="form-label"></label>
+                <input asp-for="MasterSliderTitle" class="form-control" placeholder="Enter Title" />
+                <span asp-validation-for="MasterSliderTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterSliderBreef" class="form-label"></label>
+                <input asp-for="MasterSliderBreef" class="form-control" placeholder="Enter Breef" />
+                <span asp-validation-for="MasterSliderBreef" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterSliderDesc" class="form-label"></label>
+                <input asp-for="MasterSliderDesc" class="form-control" placeholder="Enter Description" />
+                <span asp-validation-for="MasterSliderDesc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterSliderFile" class="form-label"></label>
+                <input asp-for="MasterSliderFile" type="file" class="form-control" />
+                <span asp-validation-for="MasterSliderFile" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="text-end">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">Back to List</a>
+    </div>
+</form>
+
+<div class="row d-none">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="MasterSliderId" class="form-control" type="hidden" value="0" />
+            <div class="form-group">
+                <label asp-for="MasterSliderTitle" class="form-label"></label>
+                <input asp-for="MasterSliderTitle" class="form-control" />
+                <span asp-validation-for="MasterSliderTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterSliderBreef" class="form-label"></label>
+                <input asp-for="MasterSliderBreef" class="form-control" />
+                <span asp-validation-for="MasterSliderBreef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterSliderDesc" class="form-label"></label>
+                <input asp-for="MasterSliderDesc" class="form-control" />
+                <span asp-validation-for="MasterSliderDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterSliderFile" class="form-label"></label>
+                <input asp-for="MasterSliderFile" type="file" class="form-control" />
+                <span asp-validation-for="MasterSliderFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-end d-none">
+    <a asp-action="Index"class="btn btn-success">Back to List</a>
+</div>
+

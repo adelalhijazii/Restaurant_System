@@ -1,0 +1,97 @@
+﻿@model Restaurant.Areas.Admin.ViewModels.TransactionBookTableViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="pagetitle">
+    <h1>TransactionBookTable</h1>
+    <br />
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="TransactionBookTable">TransactionBookTable</a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </nav>
+</div>
+
+<form asp-action="Edit">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="TransactionBookTableId" />
+    <input type="hidden" asp-for="CreateUser" />
+    <input type="hidden" asp-for="CreateDate" />
+    <div class="row m-0">
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="TransactionBookTableFullName" class="form-label"></label>
+                <input asp-for="TransactionBookTableFullName" class="form-control" />
+                <span asp-validation-for="TransactionBookTableFullName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="TransactionBookTableEmail" class="form-label"></label>
+                <input asp-for="TransactionBookTableEmail" class="form-control" />
+                <span asp-validation-for="TransactionBookTableEmail" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="TransactionBookTableMobileNumber" class="form-label"></label>
+                <input asp-for="TransactionBookTableMobileNumber" class="form-control" />
+                <span asp-validation-for="TransactionBookTableMobileNumber" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="TransactionBookTableDate" class="form-label"></label>
+                <input asp-for="TransactionBookTableDate" class="form-control" />
+                <span asp-validation-for="TransactionBookTableDate" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="text-end">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">Back to List</a>
+    </div>
+</form>
+
+<div class="row d-none">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="TransactionBookTableId" />
+            <input type="hidden" asp-for="CreateUser" />
+            <input type="hidden" asp-for="CreateDate" />
+            <div class="form-group">
+                <label asp-for="TransactionBookTableFullName" class="form-label"></label>
+                <input asp-for="TransactionBookTableFullName" class="form-control" />
+                <span asp-validation-for="TransactionBookTableFullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionBookTableEmail" class="form-label"></label>
+                <input asp-for="TransactionBookTableEmail" class="form-control" />
+                <span asp-validation-for="TransactionBookTableEmail" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionBookTableMobileNumber" class="form-label"></label>
+                <input asp-for="TransactionBookTableMobileNumber" class="form-control" />
+                <span asp-validation-for="TransactionBookTableMobileNumber" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TransactionBookTableDate" class="form-label"></label>
+                <input asp-for="TransactionBookTableDate" class="form-control" />
+                <span asp-validation-for="TransactionBookTableDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-end d-none">
+    <a asp-action="Index" class="btn btn-success">Back to List</a>
+</div>
+

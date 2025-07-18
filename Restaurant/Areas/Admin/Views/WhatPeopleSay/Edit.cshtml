@@ -1,0 +1,87 @@
+﻿@model Restaurant.Areas.Admin.ViewModels.WhatPeopleSayViewModel
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="pagetitle">
+    <h2>WhatPeopleSay</h2>
+    <br />
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="WhatPeopleSay">WhatPeopleSay</a></li>
+            <li class="breadcrumb-item active">Edit</li>
+        </ol>
+    </nav>
+</div>
+
+<form asp-action="Edit" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input type="hidden" asp-for="WhatPeopleSayId" />
+    <input type="hidden" asp-for="CreateUser" />
+    <input type="hidden" asp-for="CreateDate" />
+    <div class="row m-0">
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="WhatPeopleSayTitle" class="control-label"></label>
+                <input asp-for="WhatPeopleSayTitle" class="form-control" />
+                <span asp-validation-for="WhatPeopleSayTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="WhatPeopleSayDesc" class="control-label"></label>
+                <input asp-for="WhatPeopleSayDesc" class="form-control" />
+                <span asp-validation-for="WhatPeopleSayDesc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="WhatPeopleSayFile" class="control-label"></label>
+                <input asp-for="WhatPeopleSayFile" class="form-control" />
+                <span asp-validation-for="WhatPeopleSayFile" class="text-danger"></span>
+                <input type="hidden" asp-for="WhatPeopleSayImageUrl" class="form-control" />
+            </div>
+        </div>
+    </div>
+    <div class="text-end">
+        <input type="submit" value="Save" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">Back to List</a>
+    </div>
+</form>
+
+<div class="row d-none">
+    <div class="col-md-4">
+        <form asp-action="Edit" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="WhatPeopleSayId" />
+            <input type="hidden" asp-for="CreateUser" />
+            <input type="hidden" asp-for="CreateDate" />
+            <div class="form-group">
+                <label asp-for="WhatPeopleSayTitle" class="form-label"></label>
+                <input asp-for="WhatPeopleSayTitle" class="form-control" />
+                <span asp-validation-for="WhatPeopleSayTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WhatPeopleSayDesc" class="form-label"></label>
+                <input asp-for="WhatPeopleSayDesc" class="form-control" />
+                <span asp-validation-for="WhatPeopleSayDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="WhatPeopleSayFile" class="form-label"></label>
+                <input asp-for="WhatPeopleSayFile" class="form-control" />
+                <span asp-validation-for="WhatPeopleSayFile" class="text-danger"></span>
+                <input type="hidden" asp-for="WhatPeopleSayImageUrl" class="form-control" />
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-end d-none">
+    <a asp-action="Index" class="btn btn-success">Back to List</a>
+</div>
+

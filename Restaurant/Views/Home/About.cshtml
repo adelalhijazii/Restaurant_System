@@ -1,0 +1,89 @@
+﻿@model Restaurant.ViewModels.HomeViewModel
+
+@{
+    ViewData["Title"] = "About";
+    Layout = "_LayoutNew";
+}
+
+<div class="breadcrumb-area bg-img ptb-80" style="background-image:url(/assets/img/banner/breath.jpg);">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <h3>about us</h3>
+            <ul>
+                <li>
+                    <a asp-action="Index" asp-controller="Home">Home</a>
+                </li>
+                <li class="active">about us </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="about-area ptb-95">
+    <div class="container">
+        <div class="row d-flex align-items-center">
+            <div class="col-lg-6">
+                <div class="about-content pr-30">
+                    <h2> @Html.Raw(Model.SystemSetting.SystemSettingWelcomeNoteTitle) @*About Basmoti Restaurant*@ </h2>
+
+
+                    <h3> @Model.SystemSetting.SystemSettingWelcomeNoteBreef @*Basmoti ensures healthy environment. Make a short trip.*@ </h3>
+
+                    <div class="about-peragraph">
+                        @*<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec aliquet dolor libero, eget loved dost venenatis mauris finibus dictum. Vestibulum quis elit eget neque porttitor no amet dolor Proin pretium.</p>*@
+                        <p>@Html.Raw(Model.SystemSetting.SystemSettingWelcomeNoteDesc)</p>
+
+                        <div class="default-btn-style mt-35">
+                            @*<a href="#">read more</a>*@
+                            @*@Html.Raw(Model.SystemSetting.SystemSettingWelcomeNoteUrl)*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="about-img">
+                    <img alt="" src="~/photos/@Model.SystemSetting.SystemSettingWelcomeNoteImageUrl">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="services-area pt-100 pb-70 gray-bg">
+    <div class="container">
+        <div class="section-title text-center mb-50">
+            <h2>Our Services</h2>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim nostrud exercitation ullamco laboris nisi.</p>
+        </div>
+        <div class="row">
+            @foreach(var item in Model.ListMasterService)
+            {
+                <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="single-service text-center mb-30">
+                    @*<i class="fa fa-cutlery"></i>*@
+                    @Html.Raw(item.MasterServiceImage)
+                    @*<h3>100% healthy food</h3>*@
+                    @Html.Raw(item.MasterServiceTitle)
+                    @*<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>*@
+                    @Html.Raw(item.MasterServiceDesc)
+                </div>
+            </div>
+            }
+            @*<div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="single-service text-center mb-30">
+                    <i class="fa fa-cogs"></i>
+                    <h3>need & clean service</h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-6 col-12">
+                <div class="single-service text-center mb-30">
+                    <i class="fa fa-heart-o"></i>
+                    <h3>healthy environment </h3>
+                    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                </div>
+            </div>*@
+        </div>
+    </div>
+</div>

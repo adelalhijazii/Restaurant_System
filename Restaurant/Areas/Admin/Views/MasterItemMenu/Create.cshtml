@@ -1,0 +1,131 @@
+﻿@model Restaurant.Areas.Admin.ViewModels.MasterItemMenuViewmodel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="pagetitle">
+    <h2>MasterItemMenu</h2>
+    <br />
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="MasterItemMenu">MasterItemMenu</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+    </nav>
+</div>
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="MasterItemMenuId" class="form-control" type="hidden" value="0" />
+    <div class="row m-0">
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterCategoryMenu.MasterCategoryMenuName" class="form-label"></label>
+                <select asp-for="MasterCategoryMenuId"
+                        asp-items="@(new SelectList(ViewBag.category,"MasterCategoryMenuId","MasterCategoryMenuName"))" class="form-control form-select">
+                </select>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterItemMenuTitle" class="form-label"></label>
+                <input asp-for="MasterItemMenuTitle" class="form-control" placeholder="Enter Title" />
+                <span asp-validation-for="MasterItemMenuTitle" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterItemMenuBreef" class="form-label"></label>
+                <input asp-for="MasterItemMenuBreef" class="form-control" placeholder="Enter Breef" />
+                <span asp-validation-for="MasterItemMenuBreef" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterItemMenuDesc" class="form-label"></label>
+                <input asp-for="MasterItemMenuDesc" class="form-control" placeholder="Enter Description" />
+                <span asp-validation-for="MasterItemMenuDesc" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterItemMenuPrice" class="form-label"></label>
+                <input asp-for="MasterItemMenuPrice" class="form-control" placeholder="Enter Price" />
+                <span asp-validation-for="MasterItemMenuPrice" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterItemMenuFile" class="form-label"></label>
+                <input asp-for="MasterItemMenuFile" type="file" class="form-control" />
+                <span asp-validation-for="MasterItemMenuFile" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterItemMenuDate" class="form-label"></label>
+                <input asp-for="MasterItemMenuDate" class="form-control" />
+                <span asp-validation-for="MasterItemMenuDate" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="text-end">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">Back to List</a>
+    </div>
+</form>
+
+<div class="row d-none">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="MasterItemMenuId" class="form-control" type="hidden" value="0" />
+            <div class="form-group">
+                <label asp-for="MasterCategoryMenu.MasterCategoryMenuName" class="control-label"></label>
+                <select asp-for="MasterCategoryMenuId"
+                        asp-items="@(new SelectList(ViewBag.category,"MasterCategoryMenuId","MasterCategoryMenuName"))" class="form-control form-select">
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterItemMenuTitle" class="form-label"></label>
+                <input asp-for="MasterItemMenuTitle" class="form-control" />
+                <span asp-validation-for="MasterItemMenuTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterItemMenuBreef" class="form-label"></label>
+                <input asp-for="MasterItemMenuBreef" class="form-control" />
+                <span asp-validation-for="MasterItemMenuBreef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterItemMenuDesc" class="form-label"></label>
+                <input asp-for="MasterItemMenuDesc" class="form-control" />
+                <span asp-validation-for="MasterItemMenuDesc" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterItemMenuPrice" class="form-label"></label>
+                <input asp-for="MasterItemMenuPrice" class="form-control" />
+                <span asp-validation-for="MasterItemMenuPrice" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterItemMenuFile" class="form-label"></label>
+                <input asp-for="MasterItemMenuFile" type="file" class="form-control" />
+                <span asp-validation-for="MasterItemMenuFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterItemMenuDate" class="form-label"></label>
+                <input asp-for="MasterItemMenuDate" class="form-control" />
+                <span asp-validation-for="MasterItemMenuDate" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-end d-none">
+    <a asp-action="Index" class="btn btn-success">Back to List</a>
+</div>
+

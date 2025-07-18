@@ -1,0 +1,55 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <!--<Nullable>enable</Nullable>-->
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwRoot\MasterContactUsInformation\**" />
+    <Compile Remove="wwwRoot\MasterItemMenu\**" />
+    <Compile Remove="wwwRoot\MasterOffer\**" />
+    <Compile Remove="wwwRoot\MasterPartner\**" />
+    <Compile Remove="wwwRoot\MasterService\**" />
+    <Compile Remove="wwwRoot\MasterSocialMedium\**" />
+    <Content Remove="wwwRoot\MasterContactUsInformation\**" />
+    <Content Remove="wwwRoot\MasterItemMenu\**" />
+    <Content Remove="wwwRoot\MasterOffer\**" />
+    <Content Remove="wwwRoot\MasterPartner\**" />
+    <Content Remove="wwwRoot\MasterService\**" />
+    <Content Remove="wwwRoot\MasterSocialMedium\**" />
+    <EmbeddedResource Remove="wwwRoot\MasterContactUsInformation\**" />
+    <EmbeddedResource Remove="wwwRoot\MasterItemMenu\**" />
+    <EmbeddedResource Remove="wwwRoot\MasterOffer\**" />
+    <EmbeddedResource Remove="wwwRoot\MasterPartner\**" />
+    <EmbeddedResource Remove="wwwRoot\MasterService\**" />
+    <EmbeddedResource Remove="wwwRoot\MasterSocialMedium\**" />
+    <None Remove="wwwRoot\MasterContactUsInformation\**" />
+    <None Remove="wwwRoot\MasterItemMenu\**" />
+    <None Remove="wwwRoot\MasterOffer\**" />
+    <None Remove="wwwRoot\MasterPartner\**" />
+    <None Remove="wwwRoot\MasterService\**" />
+    <None Remove="wwwRoot\MasterSocialMedium\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="Areas\Admin\Views\Shared\_Layout1.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwRoot\Admin\" />
+  </ItemGroup>
+
+</Project>

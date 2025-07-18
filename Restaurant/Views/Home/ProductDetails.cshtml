@@ -1,0 +1,58 @@
+﻿
+@{
+    ViewData["Title"] = "ProductDetails";
+    Layout = "_LayoutNew";
+}
+
+<div class="breadcrumb-area bg-img ptb-80" style="background-image:url(/assets/img/banner/breath.jpg);">
+    <div class="container">
+        <div class="breadcrumb-content text-center">
+            <h3>blog sidebar</h3>
+            <ul>
+                <li>
+                    <a asp-action="Index">Home</a>
+                </li>
+                <li>
+                    <a asp-action="Menu">Menu</a>
+                </li>
+                <li class="active">Item Details </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="blog-area pt-100">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-xl-9 ">
+                <div class="blog-details-wrapper">
+
+                    <div class="single-blog-wrapper">
+                        <div class="blog-img mb-30">
+                            @foreach (var item in Model.ListMasterItemMenu)
+                            {
+                                if (item.MasterItemMenuId == Model.ItemMenu.MasterItemMenuId)
+                                {
+                                    <a href="#">
+                                        <img src="/photos/@item.MasterItemMenuImageUrl" alt="">
+                                    </a>
+                                    <span class="blogpost-time-date">
+                                        <span class="date">@item.MasterItemMenuDate.Day</span>
+                                        <span class="month">@item.MasterItemMenuDate.ToString("MMM")</span>
+                                    </span>
+                                    <h2>
+                                        @item.MasterItemMenuTitle
+                                    </h2>
+                                    <p>@item.MasterItemMenuBreef</p>
+                                    <blockquote class="importent-title">
+                                        <h4>@item.MasterItemMenuDesc</h4>
+                                    </blockquote>
+                                }
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="ptb-30"></div>
+</div>

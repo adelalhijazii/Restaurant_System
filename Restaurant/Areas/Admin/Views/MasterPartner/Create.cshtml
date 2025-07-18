@@ -1,0 +1,81 @@
+﻿@model Restaurant.Areas.Admin.ViewModels.MasterPartnerViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="pagetitle">
+    <h2>MasterPartner</h2>
+    <br />
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="MasterPartner">MasterPartner</a></li>
+            <li class="breadcrumb-item active">Create</li>
+        </ol>
+    </nav>
+</div>
+
+<form asp-action="Create" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <input asp-for="MasterPartnerId" class="form-control" type="hidden" value="0" />
+    <div class="row m-0">
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterPartnerName" class="control-label"></label>
+                <input asp-for="MasterPartnerName" class="form-control" placeholder="Enter Name" />
+                <span asp-validation-for="MasterPartnerName" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterPartnerFile" class="control-label"></label>
+                <input asp-for="MasterPartnerFile" type="file" class="form-control" />
+                <span asp-validation-for="MasterPartnerFile" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="col-4">
+            <div class="form-group">
+                <label asp-for="MasterPartnerWebsiteUrl" class="control-label"></label>
+                <input asp-for="MasterPartnerWebsiteUrl" class="form-control" placeholder="Enter URL" />
+                <span asp-validation-for="MasterPartnerWebsiteUrl" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="text-end">
+        <input type="submit" value="Create" class="btn btn-primary" />
+        <a asp-action="Index" class="btn btn-success">Back to List</a>
+    </div>
+</form>
+
+<div class="row d-none">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input asp-for="MasterPartnerId" class="form-control" type="hidden" value="0" />
+            <div class="form-group">
+                <label asp-for="MasterPartnerName" class="form-label"></label>
+                <input asp-for="MasterPartnerName" class="form-control" />
+                <span asp-validation-for="MasterPartnerName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterPartnerFile" class="form-label"></label>
+                <input asp-for="MasterPartnerFile" type="file" class="form-control" />
+                <span asp-validation-for="MasterPartnerFile" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MasterPartnerWebsiteUrl" class="form-label"></label>
+                <input asp-for="MasterPartnerWebsiteUrl" class="form-control" />
+                <span asp-validation-for="MasterPartnerWebsiteUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="text-end d-none">
+    <a asp-action="Index" class="btn btn-success">Back to List</a>
+</div>
+

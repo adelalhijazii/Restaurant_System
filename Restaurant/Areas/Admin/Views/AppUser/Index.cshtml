@@ -1,0 +1,92 @@
+﻿@model IEnumerable<Restaurant.Models.AppUser>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="pagetitle">
+    <h1>Restaurant</h1>
+    <br />
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item">AppUser</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="text-end">
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</div>
+
+<h3></h3>
+<table class="datatable">
+    <thead>
+        <tr>
+            @*<th>
+                Id
+            </th>*@
+            <th>
+                Email
+            </th>
+            <th>operations</th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            @*<td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>*@
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id"><i style="color:forestgreen;font-size:20px" class=" ri- bxs-edit"></i></a> |
+                    <a class="btnDelete" href="#" data-toggle="modal" data-target="#exampleModal" data-paths="@Url.ActionLink("Delete","AppUser",new{idDelete=item.Id})"><i style="color:red;font-size:20px" class=" ri-close-circle-line"> </i></a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confirm Delete</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                Are You sure want to delete this Record ?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" id="btnClose" data-dismiss="modal">Close</button>
+                <input type="button" class="btn btn-danger" value="Delete" id="btnConfirmDelete" />
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        var urlPatheDelete = "";
+        $(".btnDelete").click(function () {
+            //alert($(this).data("paths"))
+            urlPathDelete = $(this).data("paths");
+            console.log(urlPathDelete)
+
+        })
+        $("#btnConfirmDelete").click(function () {
+            window.location = urlPatheDelete;
+        })
+
+        $("#btnConfirmDelete").click(function () {
+
+            window.location = urlPathDelete;
+        })
+    })
+</script>
