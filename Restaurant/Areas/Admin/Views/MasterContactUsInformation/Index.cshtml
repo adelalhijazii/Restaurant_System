@@ -98,20 +98,16 @@
 
 <script>
     $(function () {
-        var urlPatheDelete = "";
+        var urlPathDelete = "";
+
         $(".btnDelete").click(function () {
-            //alert($(this).data("paths"))
+            console.log($(this).data("paths"));
             urlPathDelete = $(this).data("paths");
-            console.log(urlPathDelete)
-
-        })
-        $("#btnConfirmDelete").click(function () {
-            window.location = urlPatheDelete;
-        })
+            console.log(urlPathDelete);
+        });
 
         $("#btnConfirmDelete").click(function () {
-
             window.location = urlPathDelete;
-        })
-    })
+        });
+    });
 </script>

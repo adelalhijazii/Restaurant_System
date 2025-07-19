@@ -33,25 +33,3 @@
         <a asp-action="Index" class="btn btn-success">Back to List</a>
     </div>
 </form>
-
-<div class="row d-none">
-    <div class="col-md-4">
-        <form asp-action="Create" id="createForm">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input asp-for="MasterCategoryMenuId" class="form-control" type="hidden" value="0" />
-            <div class="form-group">
-                <label asp-for="MasterCategoryMenuName" class="form-label"></label>
-                <input asp-for="MasterCategoryMenuName" class="form-control" placeholder="Enter Name" />
-                <span asp-validation-for="MasterCategoryMenuName" class="text-danger"></span>
-            </div>
-            <div class="form-group text-end">
-                <input type="submit" value="Create" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="text-end d-none">
-    <a asp-action="Index" class="btn btn-success">Back to List</a>
-</div>
-

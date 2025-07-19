@@ -1,0 +1,113 @@
+﻿@{
+    ViewData["Title"] = "NeedHelp";
+}
+
+<style>
+    .card-title {
+        font-size: 20px;
+    }
+
+    h6 {
+        font-size: 18px !important;
+    }
+
+    .card-body{
+        font-size: 16px;
+    }
+</style>
+
+<div class="pagetitle">
+    <h2>Frequently Asked Questions</h2>
+    <br />
+    <nav>
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a asp-action="Index" asp-controller="Home">Home</a></li>
+            <li class="breadcrumb-item active">Frequently Asked Questions</li>
+        </ol>
+    </nav>
+</div>
+
+<div class="card basic">
+    <div class="card-body">
+        <h5 class="card-title">General Questions</h5>
+
+        <div>
+            <h6>1. How do I create an account?</h6>
+            <p>Simply click <strong>"Sign Up"</strong> at the top-right corner of the page, enter your email, and follow the verification steps. No credit card is required for free accounts.</p>
+        </div>
+
+        <div class="pt-2">
+            <h6>2. What payment methods do you accept?</h6>
+            <p>We accept credit/debit cards (Visa, Mastercard, AMEX), PayPal, and bank transfers. Cryptocurrency is not supported.</p>
+        </div>
+
+        <div class="pt-2">
+            <h6>3. How can I reset my password?</h6>
+            <p>Go to the <a href="#">password reset page</a>, enter your email, and check your inbox for a secure link. Links expire in 24 hours.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="card basic mt-4">
+    <div class="card-body">
+        <h5 class="card-title">Product & Services</h5>
+
+        <div>
+            <h6>1. What's included in the free vs. premium plan?</h6>
+            <p>
+                <strong>Free:</strong> Basic features, 10GB storage, limited support.<br>
+                <strong>Premium:</strong> Unlimited storage, priority support, advanced tools ($9.99/month).
+            </p>
+        </div>
+
+        <div class="pt-2">
+            <h6>2. How do I cancel my subscription?</h6>
+            <p>Navigate to <strong>Account Settings > Billing</strong> and click <em>"Cancel Plan."</em> No penalties—access continues until the billing cycle ends.</p>
+        </div>
+
+        <div class="pt-2">
+            <h6>3. Do you offer student discounts?</h6>
+            <p>Yes! Students get <strong>50% off</strong> the premium plan. Verify your .edu email <a href="#">here</a>.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="card basic mt-4">
+    <div class="card-body">
+        <h5 class="card-title">Support & Troubleshooting</h5>
+
+        <div>
+            <h6>1. How fast is customer support?</h6>
+            <p>We reply within <strong>2 business hours</strong> for premium users, and <strong>24 hours</strong> for free accounts.</p>
+        </div>
+
+        <div class="pt-2">
+            <h6>2. What if I encounter an error?</h6>
+            <p>First, refresh the page or clear your browser cache. If the issue persists, <a href="#">submit a ticket</a> with a screenshot.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="card basic mt-4">
+    <div class="card-body">
+        <h5 class="card-title">Privacy & Security</h5>
+
+        <div>
+            <h6>1. Is my data secure?</h6>
+            <p>Absolutely. We use <strong>AES-256 encryption</strong> and comply with GDPR. Data is never sold to third parties.</p>
+        </div>
+
+        <div class="pt-2">
+            <h6>2. Can I delete my account permanently?</h6>
+            <p>Yes. Go to <strong>Account Settings > Privacy</strong> and request deletion. All data is purged within 30 days.</p>
+        </div>
+
+    </div>
+</div>
+
+<div class="mt-4 text-center">
+    <p class="text-muted">Need more help? <a href="#">Contact our team</a> or email <strong>support@yourdomain.com</strong></p>
+</div>

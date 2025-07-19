@@ -50,36 +50,3 @@
         <a asp-action="Index" class="btn btn-success">Back to List</a>
     </div>
 </form>
-
-<div class="row d-none">
-    <div class="col-md-4">
-        <form asp-action="Edit" enctype="multipart/form-data">
-            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="MasterServiceId" />
-            <input type="hidden" asp-for="CreateUser" />
-            <input type="hidden" asp-for="CreateDate" />
-            <div class="form-group">
-                <label asp-for="MasterServiceTitle" class="form-label"></label>
-                <input asp-for="MasterServiceTitle" class="form-control" />
-                <span asp-validation-for="MasterServiceTitle" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MasterServiceDesc" class="form-label"></label>
-                <input asp-for="MasterServiceDesc" class="form-control" />
-                <span asp-validation-for="MasterServiceDesc" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <label asp-for="MasterServiceImage" class="form-label"></label>
-                <input asp-for="MasterServiceImage" class="form-control" />
-                <span asp-validation-for="MasterServiceImage" class="text-danger"></span>
-            </div>
-            <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
-            </div>
-        </form>
-    </div>
-</div>
-
-<div class="text-end d-none">
-    <a asp-action="Index" class="btn btn-success">Back to List</a>
-</div>

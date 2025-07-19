@@ -26,6 +26,18 @@ namespace Restaurant.Areas.Admin.Controllers
             return View(dataList);
         }
 
+        // GET: AppUserController/Details
+        public ActionResult Details(string id)
+        {
+            AppUser data = UserManager.Users.SingleOrDefault(data => data.Id == id);
+            return View(data);
+        }
+
+        public ActionResult NeedHelp()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Active(string id)
         {
             AppUser data = UserManager.Users.SingleOrDefault(data => data.Id == id);
