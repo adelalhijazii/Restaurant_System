@@ -82,7 +82,7 @@ namespace Restaurant.Areas.Admin.Controllers
                 var Resualt = await SignInManager.PasswordSignInAsync(collection.Email, collection.Password, collection.RememberMe, false);
                 if (Resualt.Succeeded)
                 {
-                    return RedirectToAction("Index", "MasterCategoryMenu");
+                    return RedirectToAction("Index", "AppUser");
                 }
                 else
                 {
