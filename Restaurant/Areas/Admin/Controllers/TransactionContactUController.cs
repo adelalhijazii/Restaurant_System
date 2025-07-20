@@ -27,49 +27,6 @@ namespace Restaurant.Areas.Admin.Controllers
             return View(data);
         }
 
-        public ActionResult Active(int id)
-        {
-            var data = TransactionContactU.Find(id);
-            data.EditDate = DateTime.Now;
-            data.EditUser = User.Identity.Name;
-            TransactionContactU.Active(id, data);
-            return RedirectToAction(nameof(Index));
-        }
-
-        // GET: TransactionContactUController/Create
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        // POST: TransactionContactUController/Create
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<ActionResult> Create(TransactionContactUViewModel collection)
-        {
-            try
-            {
-                var user = await UserManager.FindByNameAsync(User.Identity.Name);
-                var data = new TransactionContactU
-                {
-                    TransactionContactUId = collection.TransactionContactUId,
-                    TransactionContactUFullName = collection.TransactionContactUFullName,
-                    TransactionContactUEmail = collection.TransactionContactUEmail,
-                    TransactionContactUSubject = collection.TransactionContactUSubject,
-                    TransactionContactUMessage = collection.TransactionContactUMessage,
-                    CreateUser = user.Id,
-                    CreateDate = DateTime.Now,
-                    IsActive = true
-                };
-                TransactionContactU.Add(data);
-                return RedirectToAction(nameof(Index));
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
         // GET: TransactionContactUController/Edit
         public ActionResult Edit(int id)
         {

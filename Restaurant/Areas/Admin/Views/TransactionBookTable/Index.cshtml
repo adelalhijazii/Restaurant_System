@@ -61,20 +61,9 @@
                 @Html.DisplayFor(modelItem => item.TransactionBookTableDate)
             </td>
             <td>
-                    <a asp-action="Edit" asp-route-id="@item.TransactionBookTableId"><i style="color:forestgreen;font-size:20px" class=" ri- bxs-edit"></i></a> |
-                    <a class="btnDelete" href="#" data-toggle="modal" data-target="#exampleModal" data-paths="@Url.ActionLink("Delete","TransactionBookTable",new{Delete=item.TransactionBookTableId})"><i style="color:red;font-size:20px" class=" ri-close-circle-line"> </i></a>|
-                    @if (item.IsActive)
-                    {
-                        <a asp-action="Active" asp-route-id="@item.TransactionBookTableId">
-                            <i class="ri-eye-fill " style="font-size:20px"></i>
-                        </a>
-                    }
-                    else
-                    {
-                        <a asp-action="Active" asp-route-id="@item.TransactionBookTableId">
-                            <i class=" ri-eye-off-line" style="font-size:20px"></i>
-                        </a>
-                    }
+                <a asp-action="Edit" asp-route-id="@item.TransactionBookTableId"><i style="color:forestgreen;font-size:20px" class=" ri- bxs-edit"></i></a> |
+                <a class="btnDelete" href="#" data-toggle="modal" data-target="#exampleModal" data-paths="@Url.ActionLink("Delete","TransactionBookTable",
+                new{Delete=item.TransactionBookTableId})"><i style="color:red;font-size:20px" class=" ri-close-circle-line"> </i></a>
             </td>
         </tr>
 }
