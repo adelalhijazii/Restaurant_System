@@ -45,7 +45,7 @@ namespace Restaurant.Areas.Admin.Controllers
                 if (Resault.Succeeded)
                 {
                     await SignInManager.SignInAsync(User, isPersistent: false);
-                    return RedirectToAction("Index", "MasterCategoryMenu");
+                    return RedirectToAction("Index", "AppUser");
 
                 }
                 else
