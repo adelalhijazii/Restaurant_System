@@ -24,14 +24,14 @@
     <div class="row m-0">
         <div class="col-4">
             <div class="form-group">
-                <label asp-for="MasterServiceTitle" class="control-label"></label>
+                <label asp-for="MasterServiceTitle" class="form-label"></label>
                 <input asp-for="MasterServiceTitle" class="form-control" />
                 <span asp-validation-for="MasterServiceTitle" class="text-danger"></span>
             </div>
         </div>
         <div class="col-4">
             <div class="form-group">
-                <label asp-for="MasterServiceDesc" class="control-label"></label>
+                <label asp-for="MasterServiceDesc" class="form-label"></label>
                 @* <input asp-for="MasterServiceDesc" class="form-control" /> *@
                 <textarea asp-for="MasterServiceDesc" class="form-control" rows="4" placeholder="Enter Description"></textarea>
                 <span asp-validation-for="MasterServiceDesc" class="text-danger"></span>
@@ -39,7 +39,7 @@
         </div>
         <div class="col-4">
             <div class="form-group">
-                <label asp-for="MasterServiceImage" class="control-label"></label>
+                <label asp-for="MasterServiceImage" class="form-label"></label>
                 <input asp-for="MasterServiceImage" class="form-control" />
                 <span asp-validation-for="MasterServiceImage" class="text-danger"></span>
             </div>
