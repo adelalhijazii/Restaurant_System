@@ -132,7 +132,7 @@ namespace Restaurant.Areas.Admin.Controllers
                     CreateDate = collection.CreateDate,
                     EditUser = user.Id,
                     EditDate = DateTime.Now,
-
+                    IsActive = true
                 };
                 MasterItemMenu.Update(id, data);
                 return RedirectToAction(nameof(Index));
